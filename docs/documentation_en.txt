@@ -1,0 +1,53 @@
+# DOCUMENTATION — HR Analytics Portfolio
+
+1. Project Overview
+   The project investigates employee turnover using a simulated HR dataset (IBM/Kaggle).
+   The goal is to identify risk profiles, analyze associated factors, and estimate the financial cost of turnover.
+
+2. Data Description
+- Source: HR dataset (simulated).
+- Size: 1,470 employees, with 237 attritions.
+- Main variables: age, monthly salary, years at the company, department, job role, overtime, satisfaction indices.
+- Observations: no missing values. Outliers were inspected via IQR and kept, as they represent valid cases (high salaries, long careers).
+
+3. Methodology
+- **ETL & Cleaning**: column renaming (to PT), creation of derived variables (age ranges, tenure ranges, salary quartiles).
+- **EDA (Exploratory Data Analysis)**: histograms, turnover rates by segment, correlation analysis (point-biserial).
+- **Comparisons**: salary and satisfaction (stayed vs. left).
+- **Financial Calculation**: turnover cost = annual salary of attritions × replacement rate (30–70%, standard 50%).
+-  **Tools**: Python (Pandas, Matplotlib, Seaborn), Power BI.
+
+4. Key Results
+- Turnover rate: 16.1% (237/1470).
+- By department: Sales (20.6%), HR (19%), R\&D (13.8%).
+- By age: ≤25 (35.8%) vs 36–45 (9.2%).
+- By tenure: ≤1 year (34.9%) vs ≥10 years (8.1%).
+- Overtime: 30.5% (Yes) vs 10.4% (No).
+- Salary: low (29.3%) vs high (10.3%).
+- Average monthly salary: \$4,787 (left) vs \$6,832 (stayed).
+- Satisfaction consistently lower among attritions.
+- Estimated turnover cost: \$6.8 million.
+- Potential savings: \$1.02 million (15% reduction with market benchmarks: SHRM, Gallup, Deloitte).
+
+5. Insights and Conclusions
+- Turnover is not random: it concentrates among young employees, low salary, short tenure, and those working overtime.
+- Low satisfaction and low salaries reinforce attrition risk.
+- Sales and HR are priority areas for retention policies.
+- The financial impact is significant and requires targeted actions.
+
+6. Recommendations
+- Structured onboarding (reduce exits within the 1st year).
+- Career plans and promotion opportunities.
+- Salary review to reduce inequalities.
+- Overtime management to avoid overload.
+- Engagement programs (work environment, feedback, recognition).
+
+7. Study Limitations
+- Dataset is simulated (not real).
+- Qualitative aspects may not capture actual behavioral factors.
+- Correlations are weak (<0.20), indicating that turnover is multifactorial.
+
+8. Appendices in the Professional Report
+- A: Complementary graphs in Python (correlation, distributions).
+- B: Summary of methodological flow.
+- C: References (SHRM, Gallup, Deloitte, Mercer).

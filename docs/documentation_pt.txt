@@ -1,0 +1,53 @@
+# DOCUMENTAÇÃO — HR Analytics Portfolio
+
+1. Visão Geral do Projeto
+O projeto investiga a rotatividade de colaboradores utilizando um dataset de RH simulado (IBM/Kaggle).  
+O objetivo é identificar perfis de risco, analisar fatores associados e estimar o custo financeiro da rotatividade.
+
+2. Descrição dos Dados
+- Fonte: dataset de RH (simulado).  
+- Tamanho: 1.470 colaboradores, sendo 237 desligados.  
+- Principais variáveis: idade, salário mensal, anos na empresa, departamento, cargo, horas extras, índices de satisfação.  
+- Observações: não há valores faltantes. Outliers foram inspecionados via IQR e mantidos por representarem casos válidos (salários altos, carreiras longas).
+
+3. Metodologia
+- **ETL & Limpeza**: renomeação de colunas (para PT), criação de variáveis derivadas (faixas etárias, faixas de tempo de empresa, quartis de salário).  
+- **EDA (Análise Exploratória de Dados)**: histogramas, taxas de rotatividade por segmento, análise de correlação (ponto-bisserial).  
+- **Comparações**: salário e satisfação (ficaram vs. saíram).  
+- **Cálculo Financeiro**: custo da rotatividade = salário anual dos desligados × taxa de reposição (30–70%, padrão 50%).  
+- **Ferramentas**: Python (Pandas, Matplotlib, Seaborn), Power BI.
+
+4. Principais Resultados
+- Taxa de rotatividade: 16,1% (237/1470).  
+- Por departamento: Vendas (20,6%), RH (19%), P&D (13,8%).  
+- Por idade: ≤25 (35,8%) vs 36–45 (9,2%).  
+- Por tempo de casa: ≤1 ano (34,9%) vs ≥10 anos (8,1%).  
+- Horas extras: 30,5% (Sim) vs 10,4% (Não).  
+- salário: baixo (29,3%) vs alto (10,3%).  
+- salário mensal média: R$ 4.787 (saíram) vs R$ 6.832 (ficaram).  
+- Satisfação consistentemente menor entre desligados.  
+- Custo estimado da rotatividade: R$ 6,8 milhões.  
+- Economia potencial: R$ 1,02 milhão (redução de 15% com benchmarks de mercado: SHRM, Gallup, Deloitte).
+
+5. Insights e Conclusões
+- A rotatividade não é aleatória: concentra-se em jovens, baixo salário, pouco tempo de casa e colaboradores com horas extras.  
+- Baixa satisfação e baixos salários reforçam o risco de saída.  
+- Vendas e RH são áreas prioritárias para políticas de retenção.  
+- O impacto financeiro é significativo e exige ações direcionadas.
+
+6. Recomendações
+- Integração estruturada (reduzir saídas no 1º ano).  
+- Planos de carreira e oportunidades de promoção.  
+- Revisão salarial para reduzir desigualdades.  
+- Gestão de horas extras para evitar sobrecarga.  
+- Programas de engajamento (ambiente de trabalho, feedback, reconhecimento).
+
+7. Limitações do Estudo
+- Dataset é simulado (não real).  
+- Aspectos qualitativos podem não capturar fatores comportamentais reais.  
+- Correlações são fracas (<0,20), indicando que a rotatividade é multifatorial.
+
+8. Apêndices no Relatório Profissional
+- A: Gráficos complementares em Python (correlação, distribuições).  
+- B: Resumo do fluxo metodológico.  
+- C: Referências (SHRM, Gallup, Deloitte, Mercer).
