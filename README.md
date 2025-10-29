@@ -1,4 +1,4 @@
-# HR Analytics Portfolio — Employee Attrition
+# HR Analytics — Employee Attrition
 
 Este projeto analisa a **rotatividade de funcionários** com base em um dataset de RH (simulado, Kaggle/IBM HR Attrition).  
 O objetivo é entender **quem sai, por quê e qual o impacto financeiro**, utilizando **Python** (ETL + EDA + estatística) e **Power BI** (visualizações executivas e interativas).
